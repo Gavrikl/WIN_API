@@ -2,11 +2,7 @@
 //загружаем библиотеку express
 const { urlencoded } = require('express');
 const express = require('express')
-
-
 const path = require ('path');
-
-
 const homeRoutes = require('./routers/home');
 const clientPath = path.join(__dirname, 'client');
 
@@ -20,7 +16,7 @@ app.use('/',homeRoutes);
 const PORT = process.env.PORT || 3000;
 
 app.listen(3000, () => {
-    console.log(` ${PORT}`);
+    console.log(` localhost: ${PORT}`);
 });
 
 
